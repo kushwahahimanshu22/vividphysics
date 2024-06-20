@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/favicon.png" class="js-favicon" />
+    <!-- <link rel="stylesheet" href="./css/fontawesome.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Vivid Physics</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="./images/favicon.png" width="50px" />Vivid Physics
+      </div>
+      <nav id="navbar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li class="sub-menu">
+            <a href="#">Courses</a>
+            <ul>
+              <li><a href="#">Samarpan Batch</a></li>
+            </ul>
+          </li>
+          <li><a href="#">DPP Solutions</a></li>
+          <li class="sub-menu">
+            <a href="#">Book Solutions</a>
+            <ul>
+              <li><a href="#">HCV</a></li>
+              <li><a href="#">DCP</a></li>
+            </ul>
+          </li>
+          <li><a href="#">About us</a></li>
+        </ul>
+      </nav>
+      <div class="menubar"><i class="fa-solid fa-bars"  onclick="handleBar(event)"></i></div>
+    </header>
+    <!-- <div class="banner"><img src="images/samarpan.png"><p><a href="#" class="bannerLink">Available on YouTube</a></p></div> -->
+    <main id="videoframe">
+      <!-- <iframe width="789" height="444" src="https://www.youtube.com/embed/Ev3s1Bfa52g" title="Samarpan Batch Official Teaser Trailer | NEET 2026" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+    </main>
+    <footer>
+      <div class="container">
+        <div class="sec aboutus">
+          <h2>About Us</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequatur, nihil suscipit. Consequuntur dolore tenetur dolor
+            placeat deleniti! Impedit, soluta perferendis accusantium,
+            doloremque repellendus reiciendis autem quibusdam dicta veritatis
+            quaerat nisi!
+          </p>
+          <ul class="sci">
+            <li>
+              <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="sec quickLinks">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">HCV Solutions</a></li>
+            <li><a href="#">Samarpan Batch</a></li>
+            <li><a href="#">Practice sheets</a></li>
+          </ul>
+        </div>
+        <div class="sec resources">
+          <h2>Resources</h2>
+          <ul>
+            <li><a href="#">Practice sheets</a></li>
+            <li><a href="#">Practice paper</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div class="copyright">
+      <p>Copyright © 2024 Vivid Physics. All rights reserved</p>
+    </div>
+  </body>
+  <script src="./js/script.js"></script>
+  <script>
+    fetch('/api/v1/lec/Samarpan/BM/1/1').then(async (response)=>{
+      let data = await response.text();
+      console.log(data)
+    })
+  </script>
+</html>
