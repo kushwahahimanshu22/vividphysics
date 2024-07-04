@@ -11,7 +11,7 @@ body
   include _header
   h1#chapTitle 
     | !{videos[0].book} / !{chapterName}
-  main(style="min-height: 500px;")
+  main
     each chapter in chapters
       .videoEx
         .vhead
